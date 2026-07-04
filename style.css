@@ -1,0 +1,105 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.resume-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #3498db;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.image-upload {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="date"] {
+    width: calc(100% - 16px);
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.resume-output-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+#resumeOutput {
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+#resumeImage {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Additional styling for education and experience periods */
+form label[for^="education"], form label[for^="experience"] {
+    grid-column: span 2;
+}
+
+.form-group {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Adjustments for small screens */
+@media (max-width: 600px) {
+    .resume-container {
+        max-width: 100%;
+        margin: 20px;
+    }
+}
